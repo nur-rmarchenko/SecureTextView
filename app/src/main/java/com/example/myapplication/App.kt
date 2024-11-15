@@ -8,7 +8,7 @@ class App : Application(), OnApplicationSecureGestureListener by ApplicationSecu
 
     override fun onCreate() {
         super.onCreate()
-        onApplicationCreated(getSharedPreferences("app", MODE_PRIVATE))
+        onApplicationCreated(this)
     }
 
 }

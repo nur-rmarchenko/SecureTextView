@@ -1,9 +1,10 @@
 package com.example.myapplication.secure_view_component.contracts
 
-import android.content.SharedPreferences
+import android.app.Application
 
 interface OnApplicationSecureGestureListener {
-    fun onApplicationCreated(appPreferences: SharedPreferences)
-    fun isSecuredNow(): Boolean
+    val BROADCAST_TAG: String get() = "UPDATE_SECURE_STATE"
+    val isSecureNow: Boolean
+    fun onApplicationCreated(application: Application)
     fun switchSecuredState()
 }
